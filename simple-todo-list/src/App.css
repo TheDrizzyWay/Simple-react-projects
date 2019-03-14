@@ -63,3 +63,8 @@ a {
 .submit-btn:hover {
   background: #666666;
 }
+
+.link-style {
+  color: #ffffff;
+  text-decoration: none;
+}

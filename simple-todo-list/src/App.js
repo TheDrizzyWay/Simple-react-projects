@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import uuid from 'uuid';
+import axios from 'axios';
 import Header from './components/layout/Header'
+import About from './components/pages/About';
 import Todos from './components/Todos';
 import AddTodo from './components/AddTodo';
 import './App.css';
@@ -8,21 +12,27 @@ class App extends Component {
   state = {
     todos: [
       {
-        id: 1,
+        id: uuid.v4(),
         title: 'Learn React.',
         completed: false,
       },
       {
-        id: 2,
+        id: uuid.v4(),
         title: 'Eat Lunch.',
         completed: false,
       },
       {
-        id: 3,
+        id: uuid.v4(),
         title: 'Try not to go crazy.',
         completed: false,
       }
     ]
+  }
+
+  componentDidMount() {
+    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10')
+      .then(res => this.setState({ todos: res.data }))
+      .catch(err => console.log(err));
   }
 
   toggleComplete = (id) => {
@@ -44,7 +54,7 @@ class App extends Component {
 
   addTodo = (title) => {
     const newTodo = {
-      id: 4,
+      id: uuid.v4(),
       title,
       completed: false
     }
@@ -53,14 +63,21 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="container">
-          <Header />
-          <AddTodo addTodo={this.addTodo} />
-          <Todos todos={this.state.todos} toggleComplete={this.toggleComplete}
-          delTodo={this.delTodo} />
+      <Router>
+        <div className="App">
+          <div className="container">
+            <Header />
+            <Route exact path="/" render={props => (
+              <React.Fragment>
+                <AddTodo addTodo={this.addTodo} />
+                <Todos todos={this.state.todos} toggleComplete={this.toggleComplete}
+                delTodo={this.delTodo} />
+              </React.Fragment>
+            )} />
+            <Route path="/about" component={About} />
+          </div>
         </div>
-      </div>
+      </Router>
     );
   }
 }
