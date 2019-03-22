@@ -1,0 +1,17 @@
+.card {
+  height: 100px;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+.card .name {
+  padding: 10px 12px;
+  font-weight: bold;
+}
+
+.card .name span {
+  margin: 0px 0px 0px 5px;
+  font-weight: normal;
+}
