@@ -1,9 +1,16 @@
 .card {
   height: 100px;
   width: 200px;
-  border: 1px solid black;
   border-radius: 4px;
   margin-left: 10px;
+}
+
+.gain {
+  border: 1px solid #00b518;
+}
+
+.loss {
+  border: 1px solid #e60000;
 }
 
 .card .name {
@@ -14,4 +21,8 @@
 .card .name span {
   margin: 0px 0px 0px 5px;
   font-weight: normal;
+}
+
+.card .percent {
+  font-size: 0.9em;
 }
