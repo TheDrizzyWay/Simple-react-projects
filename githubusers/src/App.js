@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
+import CardList from './components/CardList';
+// import { useState } from 'react';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <p>
-            Starting
-          </p>
-        </header>
-      </div>
-    );
-  }
-}
+const { useState } = React;
+
+const App = () => {
+  const [cards, setCards] = useState([]);
+
+  return (
+    <>
+      <CardList cards={cards}/>
+    </>
+  )
+};
 
 export default App;
