@@ -15,7 +15,7 @@ const App = () => {
   return (
     <>
       <Form newCard={addNewCard} />
-      <CardList cards={cards}/>
+      <CardList cards={cards} />
     </>
   )
 };

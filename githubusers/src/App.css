@@ -13,3 +13,26 @@
 .card-name {
   font-weight: bold;
 }
+
+.add-form {
+  display: flex;
+}
+
+.add-form input[type="text"] {
+  flex: 8;
+  padding: 5px;
+}
+
+.submit-btn {
+  flex: 1;
+  display: inline-block;
+  border: none;
+  background: #555555;
+  color: #ffffff;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #666666;
+}

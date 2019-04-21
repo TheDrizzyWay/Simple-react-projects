@@ -17,14 +17,14 @@ const Form = props => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="add-form">
       <input
       type="text"
       value={username}
       onChange={e => setUsername(e.target.value)}
       placeholder="Github Username" required
       />
-      <button>Add Card</button>
+      <button className="submit-btn">Add Card</button>
     </form>
   )
 };
