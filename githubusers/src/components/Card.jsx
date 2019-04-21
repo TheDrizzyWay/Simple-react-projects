@@ -7,7 +7,7 @@ const Card = props => {
       <img alt="avatar" class="card-image" src={props.avatar_url}/>
       <div>
         <div className="card-name">{props.name}</div>
-        <div>{props.blog}</div>
+        <div>{props.bio}</div>
       </div>
     </div>
   )
