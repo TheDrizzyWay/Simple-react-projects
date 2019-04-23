@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TableHeader from '../components/TableHeader';
 import TableBody from '../components/TableBody';
 
-class UserTable extends Component {
-  render() {
-    return (
-      <table>
-        <TableHeader />
-        <TableBody />
-      </table>
-    );
-  }
-}
+const UserTable = (props) => {
+  return (
+    <table>
+      <TableHeader />
+      <TableBody users={props.users} />
+    </table>
+  );
+};
 
 export default UserTable;
