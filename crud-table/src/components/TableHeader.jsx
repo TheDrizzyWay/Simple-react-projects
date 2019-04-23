@@ -10,6 +10,6 @@ const TableHeader = () => {
       </tr>
     </thead>
   );
-}
+};
 
 export default TableHeader;
