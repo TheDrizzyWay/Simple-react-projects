@@ -4,20 +4,12 @@ const TableBody = () => {
   return (
     <tbody>
       <tr>
-        <td>Charlie</td>
-        <td>Janitor</td>
-      </tr>
-      <tr>
-        <td>Mac</td>
-        <td>Bouncer</td>
-      </tr>
-      <tr>
-        <td>Dee</td>
-        <td>Aspiring actress</td>
-      </tr>
-      <tr>
-        <td>Dennis</td>
-        <td>Bartender</td>
+        <td>Name data</td>
+        <td>Franchise data</td>
+        <td>
+          <button className="button muted-button">Edit</button>
+          <button className="button muted-button">Delete</button>
+        </td>
       </tr>
     </tbody>
   );
