@@ -10,7 +10,9 @@ const TableBody = props => {
             <td>{user.name}</td>
             <td>{user.franchise}</td>
             <td>
-              <button className="button muted-button">Edit</button>{' '}
+              <button
+              onClick={() => props.editRow(user)}
+              className="button muted-button">Edit</button>{' '}
               <button
               onClick={() => props.deleteUsers(user.id)}
               className="button muted-button">Delete</button>
