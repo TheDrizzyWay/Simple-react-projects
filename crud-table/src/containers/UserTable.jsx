@@ -6,7 +6,7 @@ const UserTable = (props) => {
   return (
     <table>
       <TableHeader />
-      <TableBody users={props.users} />
+      <TableBody users={props.users} deleteUsers={props.deleteUsers} />
     </table>
   );
 };

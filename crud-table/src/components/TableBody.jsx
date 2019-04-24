@@ -1,6 +1,7 @@
 import React from 'react';
 
 const TableBody = props => {
+
   return (
     <tbody>
       {props.users.length > 0 ? (
@@ -10,7 +11,9 @@ const TableBody = props => {
             <td>{user.franchise}</td>
             <td>
               <button className="button muted-button">Edit</button>{' '}
-              <button className="button muted-button">Delete</button>
+              <button
+              onClick={() => props.deleteUsers(user.id)}
+              className="button muted-button">Delete</button>
             </td>
           </tr>
         ))
