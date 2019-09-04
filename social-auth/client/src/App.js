@@ -4,7 +4,7 @@ import OAuth from './components/Oauth';
 import { apiUrl } from './config';
 import './App.css';
 
-// const socket = io(apiUrl);
+const socket = io(apiUrl);
 const providers = ['google', 'github'];
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
             <OAuth 
               provider={provider}
               key={provider}
-              // socket={socket}
+              socket={socket}
             />
           )}
         </div>
