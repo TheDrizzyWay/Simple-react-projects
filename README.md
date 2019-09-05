@@ -7,3 +7,4 @@ A couple of simple react apps built in a bid to learn the basics of React js
 4. Live updating crypto value card
 5. A simple app for displaying github users info using React Hooks from 'The React Handbook' by flaviocopes
 6. A reusable modal component using portals based on a tutorial by Tucker Blackwell
+7. Github authentication using socket.io

@@ -34,7 +34,7 @@ const Oauth = (props) => {
         const width = 600, height = 600;
         const left = (window.innerWidth / 2) - (width / 2);
         const top = (window.innerHeight / 2) - (height / 2);
-        const url = `${apiUrl}/${provider}?socketId=${socket.ids}`;
+        const url = `${apiUrl}/${provider}?socketId=${socket.id}`;
     
         return window.open(url, '',       
           `toolbar=no, location=no, directories=no, status=no, menubar=no, 
@@ -66,7 +66,7 @@ const Oauth = (props) => {
               <FontAwesome
                 name={'times-circle'}
                 className={'close'}
-                onClick={this.closeCard.bind(this)}
+                onClick={closeCard}
               />
               <h4>{name}</h4>
             </div>
