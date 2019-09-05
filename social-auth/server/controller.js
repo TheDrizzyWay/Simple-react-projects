@@ -4,7 +4,7 @@ const githubController = (req, res) => {
         name: req.user.username,
         photo: req.user.photos[0].value
     };
-      io.in(req.socketId).emit('github', user);
+      io.in(req.user.socketId).emit('github', user);
 };
 
 module.exports = githubController;

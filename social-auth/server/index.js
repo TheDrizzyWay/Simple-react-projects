@@ -11,7 +11,7 @@ app.use(express.json());
 passport.use(githubStrategy);
 app.use(passport.initialize());
 app.set('io', io);
-app.use('/', router);
+app.use(router);
 
 const port = 5000;
 server.listen(port, () => console.log(`server running on port ${port}`));
